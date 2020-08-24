@@ -7,6 +7,7 @@
 .app {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     font-family: "Montserrat", sans-serif;
@@ -16,20 +17,29 @@
 .sound-picker,
 .player-container {
     height: 80%;
+    width: 100%;
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
+.time-select {
+    flex-direction: column;
+}
+
+.sound-picker {
+    flex-direction: row;
+}
+
 .player-container {
+    flex-direction: column;
     position: relative;
 }
 
 .player-container svg {
     position: absolute;
-    height: 50%;
+    height: 82%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
@@ -38,23 +48,69 @@
 
 .replay {
     position: absolute;
-    bottom: 0;
+    bottom: -23%;
     left: 50%;
 }
 
 .time-display {
     position: absolute;
-    bottom: 10%;
+    bottom: -16%;
     color: #ffffff;
     font-size: 50px;
 }
+
+@media (min-width: 768px) {
+    .app {
+        display: flex;
+        flex-direction: row;
+    }
+    .time-select,
+    .sound-picker,
+    .player-container {
+        height: 80%;
+        flex: 1;
+        flex-direction: column;
+    }
+    .time-display {
+        bottom: 10%;
+    }
+    .player-container svg {
+        height: 50%;
+    }
+    .replay {
+        bottom: 0;
+    }
+}
+/*.time-select {
+    background-color: lightblue;
+}
+
+.sound-picker {
+    background-color: lightgreen;
+}
+
+.player-container {
+    background-color: lightcoral;
+}*/
 
 video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: unset;
+    height: 100%;
     z-index: -10;
+}
+
+@media (min-width: 1360px) {
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: unset;
+        z-index: -10;
+    }
 }
 
 .time-select button,
