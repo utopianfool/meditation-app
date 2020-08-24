@@ -1,9 +1,10 @@
-/**
-*   Meditation app using vanilla javascript, 
-*   with thanks to developbyed https://github.com/developedbyed/meditation-app
-*   for the initial tutorial.
-**/
-
 # Meditation App
 
+Meditation app using vanilla javascript.
 by The Utopian Fool
+
+------------------------------------------------------
+
+with thanks to developbyed
+https://www.youtube.com/watch?v=oMBXdZzYqEk
+for the initial tutorial
